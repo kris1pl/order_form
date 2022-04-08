@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sernik Doskonały!</title>
-  </head>
-  <body>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 
-    <div class="container mt-5 text-center">
+  <title>Sernik Doskonały!</title>
+</head>
+
+<body>
+
+  <div class="container mt-5 text-center">
     <div class="jumbotron">
       <h1 class="display-4">Sernik Doskonały!</h1>
       <p class="lead">Formularz zamówień.</p>
@@ -21,22 +25,28 @@
       <p>Helo Helo.</p>
     </div>
 
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-md-3 col-sm-3"></div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-           <!-- Form code begins -->
-           <form method="post" name="order form">
-            <div class="form-group"> <!-- Date input -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-3 col-sm-3"></div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <!-- Form code begins -->
+          <form method="post" name="order form">
+            <div class="form-group">
+              <!-- Date input -->
               <label class="control-label" for="product">Produkt</label>
               <select class="form-select" aria-label="Default select example">
                 <option selected>Wybierz produkt</option>
-                <option value="1">Sernik</option>
+                <option value="1">Sernik idealny</option>
                 <option value="2">Czekoladowiec</option>
                 <option value="3">Beza</option>
+                <option value="4">Rolada bezowa</option>
+                <option value="5">Tort bezowy</option>
+                <option value="6">Sernik baskijski</option>
+                <option value="7">Banoffe</option>
               </select>
             </div>
-            <div class="form-group"> <!-- Date input -->
+            <div class="form-group">
+              <!-- Date input -->
               <label class="control-label" for="quantity">Ilość</label>
               <select class="form-select" aria-label="Default select example">
                 <option selected>Wybierz ilość sztuk</option>
@@ -48,33 +58,38 @@
               </select>
             </div>
 
-            <div class="form-group"> <!-- Date input -->
+            <div class="form-group">
+              <!-- Date input -->
               <label class="control-label" for="surname">Nazwisko</label>
-              <input class="form-control" id="surname" name="surname" placeholder="Nazwisko" type="text"/>
+              <input class="form-control" id="surname" name="surname" placeholder="Nazwisko" type="text" />
             </div>
-            <div class="form-group"> <!-- Date input -->
+            <div class="form-group">
+              <!-- Date input -->
               <label class="control-label" for="name">Imię</label>
-              <input class="form-control" id="name" name="name" placeholder="Imię" type="text"/>
+              <input class="form-control" id="name" name="name" placeholder="Imię" type="text" />
             </div>
-            <div class="form-group"> <!-- Date input -->
+            <div class="form-group">
+              <!-- Date input -->
               <label class="control-label" for="telephone">Telefon</label>
-              <input class="form-control" id="telephone" name="telephone" placeholder="Telefon" type="text"/>
+              <input class="form-control" id="telephone" name="telephone" placeholder="Telefon" type="text" />
             </div>
 
-             <div class="form-group"> <!-- Date input -->
-               <label class="control-label" for="date">Data dostawy</label>
-               <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-             </div>
-             <div class="form-group mt-3"> <!-- Submit button -->
-               <button class="btn btn-primary " name="submit" type="submit">Wyślij</button>
-             </div>
-            </form>
-            <!-- Form code ends --> 
-       
-           </div>
-         </div>    
+            <div class="form-group">
+              <!-- Date input -->
+              <label class="control-label" for="date">Data dostawy</label>
+              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+            </div>
+            <div class="form-group mt-3">
+              <!-- Submit button -->
+              <button class="btn btn-primary " name="submit" type="submit">Wyślij</button>
+            </div>
+          </form>
+          <!-- Form code ends -->
+
         </div>
-       </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -82,33 +97,38 @@
 
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <!-- Bootstrap Date-Picker Plugin -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <!-- Bootstrap Date-Picker Plugin -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 
-    <script>
-      $(document).ready(function(){
-        var date_input=$('input[name="date"]'); //our date input has the name "date"
-        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-        var options={
-          format: 'mm/dd/yyyy',
-          container: container,
-          todayHighlight: true,
-          autoclose: true,
-        };
-        date_input.datepicker(options);
-      })
+  <script>
+    $(document).ready(function () {
+      var date_input = $('input[name="date"]'); //our date input has the name "date"
+      var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+      var options = {
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
   </script>
 
-  </body>
+</body>
+
 </html>

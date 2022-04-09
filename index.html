@@ -32,27 +32,31 @@
         <div class="col-md-3 col-sm-3"></div>
         <div class="col-md-6 col-sm-6 col-xs-12">
           <!-- Form code begins -->
-          <form id="form" name="order" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"
-            href="mailto:kris1.pl@gmail.com">
+          <!-- <form id="form" name="order" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"
+            href="mailto:kris1.pl@gmail.com"> -->
+
+          <form id="form" name="order" method="'post" target="_blank"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScfVncy2bd4dJjzoMfhotVHDhqoBHEiEL7AxSWBleXMYeheNA/formResponse"
+            autocomplete="off" href="mailto:kris1.pl@gmail.com">
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="product">Produkt</label>
-              <!-- <select class="form-select" aria-label="Default select example" name="entry.1686089943" id="productField">
+              <select class="form-select" aria-label="Default select example" name="entry.1686089943" id="productField">
                 <option selected>Wybierz produkt</option>
-                <option value="1">Sernik idealny</option>
-                <option value="2">Czekoladowiec</option>
-                <option value="3">Beza</option>
-                <option value="4">Rolada bezowa</option>
-                <option value="5">Tort bezowy</option>
-                <option value="6">Sernik baskijski</option>
-                <option value="7">Banoffe</option>
-              </select> -->
-              <input class="form-control" id="productField" name="entry.1686089943" placeholder="Produkt" type="text" />
+                <option value="Sernik idealny">Sernik idealny</option>
+                <option value="Czekoladowiec">Czekoladowiec</option>
+                <option value="Beza">Beza</option>
+                <option value="Rolada bezowa">Rolada bezowa</option>
+                <option value="Tort bezowy">Tort bezowy</option>
+                <option value="Sernik baskijski">Sernik baskijski</option>
+                <option value="Banoffe">Banoffe</option>
+              </select>
             </div>
+
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="quantity">Ilość</label>
-              <!-- <select class="form-select" aria-label="Default select example" name="entry.674496224" id="quantityField">
+              <select class="form-select" aria-label="Default select example" name="entry.674496224" id="quantityField">
                 <option selected>Wybierz ilość sztuk</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -61,8 +65,7 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
-              </select> -->
-              <input class="form-control" id="quantityField" name="entry.674496224" placeholder="Ilość" type="text" />
+              </select>
             </div>
 
             <div class="form-group">
@@ -90,7 +93,8 @@
             </div>
             <div class="form-group mt-3">
               <!-- Submit button -->
-              <button class="btn btn-primary " name="submit" type="submit">Wyślij</button>
+              <button class="btn btn-primary " name="submit" type="submit"
+                onclick="window.location.href = 'https://wonderful-leakey-781b6c.netlify.app/success.html';">Wyślij</button>
             </div>
           </form>
           <!-- Form code ends -->
@@ -152,7 +156,6 @@
       var field4 = $("#nameField").val();
       var field5 = $("#telephoneField").val();
       var field6 = $("#dateField").val();
-
 
       if (field1 == "") {
         alert('Proszę wpisać produkt');

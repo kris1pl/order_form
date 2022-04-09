@@ -34,7 +34,7 @@
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="product">Produkt</label>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" name="entry.1686089943" id="productField">
                 <option selected>Wybierz produkt</option>
                 <option value="1">Sernik idealny</option>
                 <option value="2">Czekoladowiec</option>
@@ -48,36 +48,40 @@
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="quantity">Ilość</label>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" name="entry.674496224" id="quantityField">
                 <option selected>Wybierz ilość sztuk</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
               </select>
             </div>
 
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="surname">Nazwisko</label>
-              <input class="form-control" id="surname" name="surname" placeholder="Nazwisko" type="text" />
+              <input class="form-control" id="surnameField" name="entry.1410900052" placeholder="Nazwisko"
+                type="text" />
             </div>
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="name">Imię</label>
-              <input class="form-control" id="name" name="name" placeholder="Imię" type="text" />
+              <input class="form-control" id="nameField" name="entry.311477901" placeholder="Imię" type="text" />
             </div>
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="telephone">Telefon</label>
-              <input class="form-control" id="telephone" name="telephone" placeholder="Telefon" type="text" />
+              <input class="form-control" id="telephoneField" name="entry.1520768974" placeholder="Telefon"
+                type="text" />
             </div>
 
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="date">Data dostawy</label>
-              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+              <input class="form-control" id="dateField" name="entry.629530047" placeholder="MM/DD/YYY" type="text" />
             </div>
             <div class="form-group mt-3">
               <!-- Submit button -->
@@ -127,6 +131,72 @@
       };
       date_input.datepicker(options);
     })
+  </script>
+
+  <script>
+    function postToGoogle() {
+      var field1 = $("#productField").val();
+      var field2 = $("#quantityField").val();
+      var field3 = $("#surnameField").val();
+      var field4 = $("#nameField").val();
+      var field5 = $("#telephoneField").val();
+      var field6 = $("#dateField").val();
+
+
+      if (field1 == "") {
+        alert('Proszę wpisać produkt');
+        document.getElementById("produktField").focus();
+        return false;
+      }
+      if (field2 == "") {
+        alert('Proszę wpisać ilość');
+        document.getElementById("quantityField").focus();
+        return false;
+      }
+      if (field3 == "") {
+        alert('Proszę wpisać nazwisko zamawiającego');
+        document.getElementById("surnameField").focus();
+        return false;
+      }
+      if (field4 == "") {
+        alert('Proszę wpisać imię zamawiającego');
+        document.getElementById("nameField").focus();
+        return false;
+      }
+      if (field5 == "") {
+        alert('Proszę wpisać numer telefonu zamawiającego');
+        document.getElementById("telephoneField").focus();
+        return false;
+      }
+      if (field6 == "") {
+        alert('Proszę wpisać datę dostawy');
+        document.getElementById("dateField").focus();
+        return false;
+      }
+
+      $.ajax({
+        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScfVncy2bd4dJjzoMfhotVHDhqoBHEiEL7AxSWBleXMYeheNA/formResponse",
+        data: {
+          "entry.1686089943": field1,
+          "entry.674496224": field2,
+          "entry.1410900052": field3,
+          "entry.311477901": field4,
+          "entry.1520768974": field5,
+          "entry.629530047": field6,
+        },
+        type: "POST",
+        dataType: "xml",
+        success: function (d) {
+        },
+        error: function (x, y, z) {
+
+          $('#success-msg').show();
+          $('#form').hide();
+
+        }
+      });
+      return false;
+    }
   </script>
 
 </body>

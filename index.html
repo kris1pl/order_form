@@ -30,7 +30,8 @@
         <div class="col-md-3 col-sm-3"></div>
         <div class="col-md-6 col-sm-6 col-xs-12">
           <!-- Form code begins -->
-          <form method="post" name="order form">
+          <form form id="form" name="order" target="_self" onsubmit="return postToGoogle();" action=""
+            autocomplete="off" href="mailto:kris1.pl@gmail.com">
             <div class="form-group">
               <!-- Date input -->
               <label class="control-label" for="product">Produkt</label>
@@ -89,6 +90,12 @@
             </div>
           </form>
           <!-- Form code ends -->
+          <br>
+          <br>
+
+          <h3 id="success-msg"
+            style="text-align: center !important; margin-top:190px !important; display:none; color:#333333"> Zamówienie
+            zostało przesłane. <a href="https://wonderful-leakey-781b6c.netlify.app/">Powrót do strony głównej</a></h3>
 
         </div>
       </div>
@@ -133,7 +140,7 @@
     })
   </script>
 
-  <!-- <script>
+  <script>
     function postToGoogle() {
       var field1 = $("#productField").val();
       var field2 = $("#quantityField").val();
@@ -197,7 +204,7 @@
       });
       return false;
     }
-  </script> -->
+  </script>
 
 </body>
 
